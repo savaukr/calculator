@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="rus">
+<head>
+	<meta http-equiv="content-type" content="text/html"  charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Калькулятор</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<div id="calculator">
+		<div class="calcCost">
+            <h3>Калькулятор стоимости:</h3>
+            <div class="section_box auction">
+                <h4>Выберите аукцион:</h4>
+                <div class="d-flex">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="auctionScanVar" value="copart" checked>
+                        Copart
+                      </label>
+                    </div>
+                    <div class="form-check ml-3">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="auctionScanVar" value="iaai">
+                        IAAI
+                      </label>
+                    </div>
+                </div>
+            </div>
+            <div class="section_box">
+                <h4 class="mt-3">Вставьте ссылку страницы лота, либо впишите номер лота:</h4>
+                <small>Для IAAI вы можете указать ссылку, либо Stock#</small>
+                <div class="input-group">
+                    <input id="lot" type="text" class="form-control auction-link" placeholder="https://www.copart.com/lot/25735129 | 25735129 " v-model="lot">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-primary" v-on:click="scanF()" type="button">Сканировать</button>
+                    </div>
+                </div>
+                <div  class="scan_price-enter"></div>
+                <div id="auction" class="result">Аукцион:</div>
+                <div id="location" class="result">Локация:</div>
+                <div id="cost" class="result">Порт:</div>
+                <div id="cost" class="result">Цена доставки до порта:</div>
+                <button v-on:click="getLocation()">getLocation</button>
+            </div>
+        </div>
+	</div>
+	<script type="text/javascript" src="./js/vue.js"></script>
+    <!--<script type="text/javascript" src="./js/vue.min.js"></script> -->
+    <script type="text/javascript" src="./js/calculator.js"></script>
+</body>
+</html>

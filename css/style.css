@@ -1,0 +1,28 @@
+#calculator {
+	width: 100%;
+	background-color: #BBBBBB;
+	padding: 10px;
+	font-size: 18px;
+}
+small {
+	
+}
+.section_box {
+	margin-top: 15px;
+}
+.d-flex {
+	display:flex;
+}
+
+.input-group input {
+	width: 90%;
+}
+
+.form-check-label {
+	margin-right: 20px;
+}
+.btn {
+	padding: 4px;
+	border-radius: 5px;
+	margin-top: 7px
+}

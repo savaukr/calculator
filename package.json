@@ -1,0 +1,20 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "auctions copart and iaai",
+  "main": "js/calculator.js",
+  "dependencies": {
+    "node-static": "^0.7.11",
+    "puppeteer": "^1.17.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-concat": "^2.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Slava",
+  "license": "ISC"
+}
