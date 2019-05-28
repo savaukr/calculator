@@ -11,9 +11,12 @@ function styles() {
 		        }))
 				.pipe(gulp.dest('./dist/css'));
 }
-
+const jsFiles = [
+'./js/calculator.js',
+'./js/vue.min.js'
+];
 function scripts() {
-	return gulp.src("./js/**/*.js")
+	return gulp.src(jsFiles)
 				.pipe(concat('all.js'))
 				.pipe(gulp.dest('./dist/js'));
 }
