@@ -18,7 +18,7 @@ var vm = new Vue({
 			alert("this is iaai /" + this.lot);
 		},
 		getLocation: function () {
-          let locationEl = document.getElementById('location');
+          var locationEl = document.getElementById('location');
           //location.innerHTML = '';
           var xhr = new XMLHttpRequest();
           xhr.open('GET', 'vote', true);
@@ -36,18 +36,16 @@ var vm = new Vue({
           xhr.send();
         },
         scanF: function() {
-            let auctions = document.getElementsByName("auctionScanVar");
-            let auction='';
-            for (let i=0; i<auctions.length; i++) {
+            var auctions = document.getElementsByName("auctionScanVar");
+            var auction='';
+            for (var i=0; i<auctions.length; i++) {
                 if (auctions[i].matches('input[type="radio"]:checked')) {
                     auction = auctions[i].value;
                 };
             }
-            this.auction = auction;
-            this.location = 'ff';
-            this.port = 'pp';
             if (auction=='copart') this.ifCopart();
             if (auction=='iaai') this.ifIaai();
+            return auction;
 		}
 	}
 	

@@ -5,7 +5,7 @@ var static = require('node-static');
 var file = new static.Server('.');
 const puppeteer = require('puppeteer');
 
-let lotUrl = 'https://www.copart.com/lot/42596478';
+let lotUrl = 'https://www.copart.com/lot/25177299';
 
 let scrape = async () => {
   // Здесь выполняются операции скрапинга...

@@ -1,6 +1,7 @@
 const gulp = require("gulp");
 const concat = require("gulp-concat");
 const autoprefixer = require('gulp-autoprefixer');
+var uglify = require('gulp-uglify');
 
 function styles() {
 	return gulp.src("./css/**/*.css")
@@ -18,6 +19,7 @@ const jsFiles = [
 function scripts() {
 	return gulp.src(jsFiles)
 				.pipe(concat('all.js'))
+				.pipe(uglify({toplevel:true}))
 				.pipe(gulp.dest('./dist/js'));
 }
 // Создаем простой таск
