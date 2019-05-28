@@ -5,7 +5,7 @@ var static = require('node-static');
 var file = new static.Server('.');
 const puppeteer = require('puppeteer');
 
-let lotUrl = 'https://www.copart.com/lot/25177299';
+let lotUrl = 'https://www.copart.com/lot/42596478';
 
 let scrape = async () => {
   // Здесь выполняются операции скрапинга...
@@ -17,6 +17,7 @@ let scrape = async () => {
     return document.querySelector('#mainBody > div.inner-wrap > div > div.container-fluid.lot-details-page-print > div > div:nth-child(1) > div:nth-child(3) > div > div.row.no-margin > div.col-md-7.no-padding > div.row.no-margin > div.col-md-5.pull-right.no-padding.col-sm-12.col-xs-12.bid-right-col > div.formbox.sale-info-box > div > div > div > div > div > div:nth-child(1) > span > a').innerText;    
   });
   browser.close();
+  alert(result);
   return result;
 };
 
